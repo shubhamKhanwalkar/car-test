@@ -25,18 +25,20 @@ if (mousePressedOver(volks)) {
   volks.velocityX = 15;
 }
 
- BMW.collide(wall)
+ 
  
   
  
 
- if (AUDI.collide(wall)) {
- AUDI.visible = false;
- }
+Collide (AUDI,wall);
+Collide (BMW,wall);
+Collide (volks,wall);
+ 
+ 
 
- if (volks.x> wall.x) {
-text("can be trusted",10,70);
-text("cannoy be trusted",10,200);
-text("best",10,330);
+ if (volks.x > 200 && BMW.x > 200 && AUDI.x > 200) {
+text("good ,deformation < 80",10,70);
+text("good ,deformation < 80",10,200);
+text("average , deformation > 80 ,<180",10,330);
  }
 }
